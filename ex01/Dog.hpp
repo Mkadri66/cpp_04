@@ -6,7 +6,7 @@
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:26:16 by mkadri            #+#    #+#             */
-/*   Updated: 2025/03/27 11:09:28 by mkadri           ###   ########.fr       */
+/*   Updated: 2025/03/27 11:24:26 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ class Dog: public Animal {
 
 	Dog();
 	Dog(Dog const & copy);
-	virtual ~Dog();	
+	~Dog();	
 
 	Dog&	operator=(Dog const & rhs);
+	Brain*	getBrain() const;
 
 	virtual void	makeSound() const;
-	Brain*			getBrain() const;
 
 	private:
 
