@@ -6,7 +6,7 @@
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:14:42 by mkadri            #+#    #+#             */
-/*   Updated: 2025/01/09 13:22:30 by mkadri           ###   ########.fr       */
+/*   Updated: 2025/03/27 11:37:59 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat: public AAnimal {
 
@@ -21,11 +22,16 @@ class Cat: public AAnimal {
 
 	Cat();
 	Cat(Cat const & copy);
-	virtual ~Cat();	
+	~Cat();	
 
 	Cat&	operator=(Cat const & rhs);
 
 	virtual void	makeSound() const;
+	Brain*			getBrain() const;
+
+	private:
+
+	Brain*	HiThisIsBrain;
 };
 
 #endif
