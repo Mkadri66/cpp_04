@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 12:26:16 by mkadri            #+#    #+#             */
-/*   Updated: 2025/03/27 11:09:28 by mkadri           ###   ########.fr       */
+/*   Created: 2025/03/27 11:03:30 by mkadri            #+#    #+#             */
+/*   Updated: 2025/03/27 11:03:53 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#include "Brain.hpp"
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+Brain::Brain() {
+	std::cout << "Brain constructor called" << std::endl;
+}
 
-class Dog: public Animal {
+Brain::Brain(Brain const & copy) {
+	*this=copy;
+}
 
-	public:
+Brain::~Brain() {
+	std::cout << "Brain destructor called" << std::endl;
+}
 
-	Dog();
-	Dog(Dog const & copy);
-	virtual ~Dog();	
-
-	Dog&	operator=(Dog const & rhs);
-
-	virtual void	makeSound() const;
-	Brain*			getBrain() const;
-
-	private:
-
-	Brain*	HiThisIsBrain;
-};
-
-#endif
+Brain&	Brain::operator=(Brain const & rhs) {
+	for (int i = 0; i < 100; i++) {
+		this->ideas[i] = rhs.ideas[i];
+	}
+	return *this;
+}

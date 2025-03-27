@@ -6,7 +6,7 @@
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:25:30 by mkadri            #+#    #+#             */
-/*   Updated: 2025/01/07 13:00:49 by mkadri           ###   ########.fr       */
+/*   Updated: 2025/03/27 11:10:37 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ Dog::~Dog() {
 Dog&	Dog::operator=(Dog const & rhs) {
 	this->_type = rhs.getType();
 	return *this;
+}
+
+Brain*	Dog::getBrain() const {
+	return HiThisIsBrain;
 }
 
 void	Dog::makeSound() const {

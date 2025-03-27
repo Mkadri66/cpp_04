@@ -6,7 +6,7 @@
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:13:56 by mkadri            #+#    #+#             */
-/*   Updated: 2025/01/07 12:47:39 by mkadri           ###   ########.fr       */
+/*   Updated: 2025/03/27 11:10:24 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ Cat::~Cat() {
 Cat&	Cat::operator=(Cat const & rhs) {
 	this->_type = rhs.getType();
 	return *this;
+}
+
+Brain*	Cat::getBrain() const {
+	return HiThisIsBrain;
 }
 
 void	Cat::makeSound() const {
