@@ -6,7 +6,7 @@
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:25:30 by mkadri            #+#    #+#             */
-/*   Updated: 2025/03/27 11:33:25 by mkadri           ###   ########.fr       */
+/*   Updated: 2025/03/28 13:37:30 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog() {
 	std::cout << "Dog constructor called" << std::endl;
 }
 
-Dog::Dog(Dog const & copy) : Animal(copy) {
+Dog::Dog(Dog const & copy) : Animal(copy) , HiThisIsBrain(new Brain(*copy.HiThisIsBrain)) {
 	HiThisIsBrain = new Brain(*copy.HiThisIsBrain);
 	std::cout << "Dog copy constructor called" << std::endl;
 }

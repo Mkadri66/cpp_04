@@ -6,7 +6,7 @@
 /*   By: mkadri <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:13:56 by mkadri            #+#    #+#             */
-/*   Updated: 2025/03/27 11:30:29 by mkadri           ###   ########.fr       */
+/*   Updated: 2025/03/28 13:37:04 by mkadri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ Cat::Cat() {
 	std::cout << "Cat constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const & copy)  : Animal(copy) {
-	*this=copy;
-	std::cout << "Cat copy constructor called" << std::endl;
+Cat::Cat(Cat const & copy) : Animal(copy), HiThisIsBrain(new Brain(*copy.HiThisIsBrain)) {
+    std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat::~Cat() {
